@@ -26,7 +26,6 @@ html {
 } 
 
 #slider-wrapper {
-    /* width: 680px; */
     height: 610px;
     overflow: hidden;
     position: relative;
@@ -35,11 +34,9 @@ html {
 #slider {
    display: flex;
    position: relative;
-
+    margin-top: 20px;
    
 }
-
-
 
 .slider_box {
     height: 540px;
@@ -50,14 +47,6 @@ html {
     align-items: center;
     flex-direction: column;
     cursor: pointer;
-
-    
-    
-    margin-top: 20px; 
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    
 }
 
 .slider_box:hover {
@@ -65,7 +54,13 @@ html {
     transform-style: preserve-3d;
     transform: scale(1.02);
     transition: all ease 0.3s;
+   
 }
+
+.slider_box.active{
+    /* background-color:white; */
+}
+
 .slider_box__img {
     height: 250px;
     max-height: 100%;
@@ -90,7 +85,9 @@ html {
     text-align: center;
     font-size: 1.4rem;
 }
-
+.slider_box .active .box-details__note{
+    color: black
+}
 /* SILIDER CONTROL   */
 .slider_control {
     font-size: 3rem;
@@ -120,8 +117,13 @@ html {
 .item-dot {
     width: 20px;
     height: 20px;
-    background-color: white;
+    background-color: black;
     border-radius: 50%;
     margin: 0 10px 0 10px;
 }
+
+.item-dot.active {
+     background-color: white;
+}
+
 
